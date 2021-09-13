@@ -1,0 +1,6 @@
+17:08:16.166 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+17:08:23.009 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Search page is Displayed
+17:08:23.087 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Navigated to users tab
+17:08:29.361 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Add new user page is displayed
+17:08:33.506 [TestNG] INFO  Assignment.Qualicoach.BaseClass - New user is successfully created
+17:08:37.639 [TestNG] INFO  Assignment.Qualicoach.BaseClass - driver closed

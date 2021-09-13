@@ -1,0 +1,6 @@
+21:01:32.986 [TestNG] INFO  Assignment.Qualicoach.BaseClass - user is already enrolled to that course
+21:01:33.048 [TestNG] INFO  Assignment.Qualicoach.BaseClass - browser is initialized
+21:01:37.297 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Browser closed
+21:01:40.705 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Landed to the edit profile page
+21:01:46.885 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+21:01:58.022 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Search page is Displayed
