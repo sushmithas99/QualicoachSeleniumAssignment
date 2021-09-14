@@ -31,7 +31,7 @@ public class CourseCategoryManagement extends BaseClass {
 	By courseName = By.xpath("//div[@id='course-listing']//a[text()='"+courseName1+"']");
 	@FindBy(linkText = "Edit")
 	WebElement edit;
-
+	By categoryNameId = By.xpath("//a[text()='"+categoryName+"']/following-sibling::div/span[text()='"+ctId+"']");
 	public WebElement createNewCategory() {
 		return createNewCategory;
 	}
@@ -50,6 +50,9 @@ public class CourseCategoryManagement extends BaseClass {
 	}
 	public WebElement getCategoryId () {
 		return driver.findElement(categoryId);
+	}
+	public WebElement getCategoryNameId(){
+		return driver.findElement(categoryNameId);
 	}
 	//span[@class='dimmed idnumber']
 	

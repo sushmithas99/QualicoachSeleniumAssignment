@@ -14,13 +14,15 @@ import pageObject.ReportDownload;
 public class DownloadReportTest extends BaseClass {
 	public WebDriver driver;
 	public static Logger log = LogManager.getLogger(BaseClass.class.getName());
+
 	@BeforeTest
 	public void launchBrowser() {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
 	}
+
 	@Test
-	public void downloadReport(){
+	public void downloadReport() throws InterruptedException {
 		driver.get(prop.getProperty("dashboardUrl"));
 		log.info("Navigated to Login page");
 		String username = prop.getProperty("adminUsername");
@@ -34,13 +36,15 @@ public class DownloadReportTest extends BaseClass {
 		ReportDownload reportDownload = new ReportDownload(driver);
 		reportDownload.getDownloadType().click();
 		log.info("Report is downloaded");
-		
+		Thread.sleep(3000);
+
 	}
+
 	@AfterTest
-	public void tearDown(){
+	public void tearDown() {
 		driver.close();
 		log.info("Browser closed");
 	}
-	
-	//*[@id="inst168"]/div[2]/ul/li[3]/div/a
+
+	// *[@id="inst168"]/div[2]/ul/li[3]/div/a
 }

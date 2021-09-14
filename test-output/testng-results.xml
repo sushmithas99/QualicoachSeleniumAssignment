@@ -1,74 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="8" passed="6">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="124985" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:26:05Z">
+  <suite name="Default suite" duration-ms="9022" started-at="2021-09-14T15:13:49Z" finished-at="2021-09-14T15:13:58Z">
     <groups>
     </groups>
-    <test name="Download reports" duration-ms="41148" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:24:41Z">
-      <class name="adminTests.DownloadReportTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.DownloadReportTest@25641d39]" name="launchBrowser" is-config="true" duration-ms="4069" started-at="2021-09-14T13:54:00Z" finished-at="2021-09-14T13:54:04Z">
+    <test name="Default test" duration-ms="9022" started-at="2021-09-14T15:13:49Z" finished-at="2021-09-14T15:13:58Z">
+      <class name="adminTests.CreateCourseTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@79e2c065]" name="launchBrowser" is-config="true" duration-ms="2237" started-at="2021-09-14T20:43:49Z" finished-at="2021-09-14T20:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="downloadReport()[pri:0, instance:adminTests.DownloadReportTest@25641d39]" name="downloadReport" duration-ms="36961" started-at="2021-09-14T13:54:04Z" finished-at="2021-09-14T13:54:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- downloadReport -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:adminTests.DownloadReportTest@25641d39]" name="tearDown" is-config="true" duration-ms="113" started-at="2021-09-14T13:54:41Z" finished-at="2021-09-14T13:54:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- adminTests.DownloadReportTest -->
-    </test> <!-- Download reports -->
-    <test name="Enrol into course" duration-ms="72623" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:25:12Z">
-      <class name="studentTests.CourseEnrollmentTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:studentTests.CourseEnrollmentTest@a38c7fe]" name="launchBrowser" is-config="true" duration-ms="4473" started-at="2021-09-14T13:54:00Z" finished-at="2021-09-14T13:54:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="enrollIntoCourse()[pri:0, instance:studentTests.CourseEnrollmentTest@a38c7fe]" name="enrollIntoCourse" duration-ms="68072" started-at="2021-09-14T13:54:04Z" finished-at="2021-09-14T13:55:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enrollIntoCourse -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:studentTests.CourseEnrollmentTest@a38c7fe]" name="closeBrowser" is-config="true" duration-ms="74" started-at="2021-09-14T13:55:12Z" finished-at="2021-09-14T13:55:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- studentTests.CourseEnrollmentTest -->
-    </test> <!-- Enrol into course -->
-    <test name="Student login" duration-ms="75383" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:25:15Z">
-      <class name="studentTests.StudentLoginTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:studentTests.StudentLoginTest@7d4f9aae]" name="launchBrowser" is-config="true" duration-ms="4267" started-at="2021-09-14T13:54:00Z" finished-at="2021-09-14T13:54:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="userLogin(java.lang.String, java.lang.String)[pri:0, instance:studentTests.StudentLoginTest@7d4f9aae]" name="userLogin" duration-ms="14405" started-at="2021-09-14T13:54:04Z" data-provider="loginCredentials" finished-at="2021-09-14T13:54:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[user01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[qwer]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="createCourse()[pri:0, instance:adminTests.CreateCourseTest@79e2c065]" name="createCourse" duration-ms="2680" started-at="2021-09-14T20:43:52Z" finished-at="2021-09-14T20:43:54Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected [Qualicoach] but found [Qualicoach: Log in to the site]]]>
+              <![CDATA[Cannot locate an element using id=username
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Qualicoach] but found [Qualicoach: Log in to the site]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at studentTests.StudentLoginTest.userLogin(StudentLoginTest.java:31)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=username
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy25.sendKeys(Unknown Source)
+	at Assignment.Qualicoach.BaseClass.loginCredentials(BaseClass.java:57)
+	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -82,86 +48,42 @@
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userLogin -->
-        <test-method status="PASS" signature="userLogin(java.lang.String, java.lang.String)[pri:0, instance:studentTests.StudentLoginTest@7d4f9aae]" name="userLogin" duration-ms="52289" started-at="2021-09-14T13:54:19Z" data-provider="loginCredentials" finished-at="2021-09-14T13:55:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[user12]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[sushmitha12]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:studentTests.StudentLoginTest@7d4f9aae]" name="closeBrowser" is-config="true" duration-ms="4163" started-at="2021-09-14T13:55:11Z" finished-at="2021-09-14T13:55:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- studentTests.StudentLoginTest -->
-    </test> <!-- Student login -->
-    <test name="Update user" duration-ms="78897" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:25:19Z">
-      <class name="studentTests.UpdateUserTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:studentTests.UpdateUserTest@41a0aa7d]" name="launchBrowser" is-config="true" duration-ms="4017" started-at="2021-09-14T13:54:00Z" finished-at="2021-09-14T13:54:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="updateUserProfile()[pri:1, instance:studentTests.UpdateUserTest@41a0aa7d]" name="updateUserProfile" duration-ms="74777" started-at="2021-09-14T13:54:04Z" finished-at="2021-09-14T13:55:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateUserProfile -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:studentTests.UpdateUserTest@41a0aa7d]" name="closeBrowser" is-config="true" duration-ms="93" started-at="2021-09-14T13:55:19Z" finished-at="2021-09-14T13:55:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- studentTests.UpdateUserTest -->
-    </test> <!-- Update user -->
-    <test name="create course" duration-ms="93324" started-at="2021-09-14T08:24:00Z" finished-at="2021-09-14T08:25:33Z">
-      <class name="adminTests.CreateCourseTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@229c6181]" name="launchBrowser" is-config="true" duration-ms="4097" started-at="2021-09-14T13:54:00Z" finished-at="2021-09-14T13:54:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="createCourse()[pri:0, instance:adminTests.CreateCourseTest@229c6181]" name="createCourse" duration-ms="88930" started-at="2021-09-14T13:54:04Z" finished-at="2021-09-14T13:55:33Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- createCourse -->
+        <test-method status="FAIL" signature="closeBrowser()[pri:0, instance:adminTests.CreateCourseTest@79e2c065]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2021-09-14T20:43:54Z" finished-at="2021-09-14T20:43:54Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='QualitestCourse']"}
+              <![CDATA[chrome not reachable
   (Session info: chrome=93.0.4577.63)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d8c45374c5ae0a28388141267bab555
-*** Element info: {Using=xpath, value=//a[text()='QualitestCourse']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62812}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9d9caf4430aeeb3c883ac3c965e9e6b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='QualitestCourse']"}
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=93.0.4577.63)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57908}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d8c45374c5ae0a28388141267bab555
-*** Element info: {Using=xpath, value=//a[text()='QualitestCourse']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62812}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b9d9caf4430aeeb3c883ac3c965e9e6b
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -172,76 +94,38 @@ Session ID: 4d8c45374c5ae0a28388141267bab555
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObject.CourseCategoryManagement.getCategoryName(CourseCategoryManagement.java:40)
-	at adminTests.CreateCourseTest.createNewCourse(CreateCourseTest.java:104)
-	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:65)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at adminTests.CreateCourseTest.closeBrowser(CreateCourseTest.java:177)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1012)
+	at org.testng.TestRunner.run(TestRunner.java:636)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createCourse -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:adminTests.CreateCourseTest@229c6181]" name="closeBrowser" is-config="true" duration-ms="61" started-at="2021-09-14T13:55:33Z" finished-at="2021-09-14T13:55:33Z">
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- adminTests.CreateCourseTest -->
-    </test> <!-- create course -->
-    <test name="create user" duration-ms="31892" started-at="2021-09-14T08:25:12Z" finished-at="2021-09-14T08:25:44Z">
-      <class name="adminTests.CreateUserTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateUserTest@71ba6d4e]" name="launchBrowser" is-config="true" duration-ms="1437" started-at="2021-09-14T13:55:12Z" finished-at="2021-09-14T13:55:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="createUser()[pri:0, instance:adminTests.CreateUserTest@71ba6d4e]" name="createUser" duration-ms="26290" started-at="2021-09-14T13:55:14Z" finished-at="2021-09-14T13:55:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:adminTests.CreateUserTest@71ba6d4e]" name="closeBrowser" is-config="true" duration-ms="4161" started-at="2021-09-14T13:55:40Z" finished-at="2021-09-14T13:55:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- adminTests.CreateUserTest -->
-    </test> <!-- create user -->
-    <test name="Take quiz" duration-ms="83303" started-at="2021-09-14T08:24:41Z" finished-at="2021-09-14T08:26:05Z">
-      <class name="studentTests.TakeQuizTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:studentTests.TakeQuizTest@1c7696c6]" name="launchBrowser" is-config="true" duration-ms="1564" started-at="2021-09-14T13:54:41Z" finished-at="2021-09-14T13:54:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="takeQuiz()[pri:0, instance:studentTests.TakeQuizTest@1c7696c6]" name="takeQuiz" duration-ms="81667" started-at="2021-09-14T13:54:43Z" finished-at="2021-09-14T13:56:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeQuiz -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:studentTests.TakeQuizTest@1c7696c6]" name="tearDown" is-config="true" duration-ms="72" started-at="2021-09-14T13:56:05Z" finished-at="2021-09-14T13:56:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- studentTests.TakeQuizTest -->
-    </test> <!-- Take quiz -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

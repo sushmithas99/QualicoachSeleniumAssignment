@@ -1,9 +1,14 @@
 package adminTests;
 
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -70,7 +75,7 @@ public class CreateCourseTest extends BaseClass {
 		manageCourseAndCategories();
 		searchCourse();
 		log.info("Entered to Quiz page");
-		addNewQuiz();
+//		addNewQuiz();
 		log.info("new quiz is created");
 
 	}
@@ -93,7 +98,7 @@ public class CreateCourseTest extends BaseClass {
 	public void createCategory() {
 		addNewCategory = new AddNewCategory(driver);
 		dropDown = new Select(addNewCategory.selectParentCategory());
-		dropDown.selectByIndex(1);
+		dropDown.selectByVisibleText("Induction Training");
 		addNewCategory.getCategoryName().sendKeys(prop.getProperty("categoryName"));
 		addNewCategory.getCategoryId().sendKeys(prop.getProperty("categoryId"));
 		scrollBy(0, 500);
@@ -101,16 +106,30 @@ public class CreateCourseTest extends BaseClass {
 	}
 
 	public void createNewCourse() {
-		ccm.getCategoryName().click();
+//		List<WebElement> categoryEle = driver.findElements(By.xpath("//a[text()='QualitestCourse']"));
+//		Iterator<WebElement> iterator = categoryEle.iterator();
+//		while(iterator.hasNext()){
+//			
+//		}
+//		
+//		String ctid = prop.getProperty("categoryId");
+//		String ctname = prop.getProperty("categoryName");
+//		String actualCategoryId = ccm.getCategoryId().getText();
+//		String actualCtName = ccm.getCategoryName().getText();
+//		if (ctid.equals(actualCategoryId) && ctname.equals(actualCtName)) {
+//			ccm.getCategoryName().click();
+//		}
+		
+		ccm.getCategoryNameId().click();
 		ccm.createNewCourse().click();
 		addNewCourse = new AddNewCourse(driver);
 		addNewCourse.getFullName().sendKeys(prop.getProperty("fullName"));
 		addNewCourse.getShortName().sendKeys(prop.getProperty("shortName"));
-		addNewCourse.courseFormate().click();
-		dropDown = new Select(addNewCourse.selectFormate());
-		dropDown.selectByVisibleText("Single activity format");
-		dropDown = new Select(addNewCourse.selectActivityType());
-		dropDown.selectByVisibleText("Quiz");
+//		addNewCourse.courseFormate().click();
+//		dropDown = new Select(addNewCourse.selectFormate());
+//		dropDown.selectByVisibleText("Single activity format");
+//		dropDown = new Select(addNewCourse.selectActivityType());
+//		dropDown.selectByVisibleText("Quiz");
 		addNewCourse.saveAndDisplayBtn().click();
 	}
 
@@ -127,34 +146,31 @@ public class CreateCourseTest extends BaseClass {
 	}
 
 	public void searchCourse() {
-		String ctid = prop.getProperty("categoryId");
-		String ctname = prop.getProperty("categoryName");
-		String actualCategoryId = ccm.getCategoryId().getText();
-		String actualCtName = ccm.getCategoryName().getText();
-		if (ctid.equals(actualCategoryId) && ctname.equals(actualCtName)) {
-			ccm.getCategoryName().click();
-		}
-
+//		String ctid = prop.getProperty("categoryId");
+//		String ctname = prop.getProperty("categoryName");
+//		String actualCategoryId = ccm.getCategoryId().getText();
+//		String actualCtName = ccm.getCategoryName().getText();
+		ccm.getCategoryNameId().click();
 		ccm.getCourseName().click();
 		scrollBy(0, 700);
 		ccm.editCourse().click();
 		addNewCourse.saveAndDisplayBtn().click();
 	}
 
-	public void addNewQuiz() {
-		addNewQuiz = new AddNewQuiz(driver);
-		addNewQuiz.getQuizName().sendKeys(prop.getProperty("quizName"));
-		addNewQuiz.submitQuiz().click();
-		editQuiz = new EditQuiz(driver);
-		editQuiz.clickEditQuiz().click();
-		editQuiz.clickAddQuiz().click();
-		editQuiz.clickRandomQuiz().click();
-		addRandomQuestion = new AddRandomQuestion(driver);
-		dropDown = new Select(addRandomQuestion.getNumberOfQuiz());
-		dropDown.selectByValue("4");
-		addRandomQuestion.clickAddRandomQuiz().click();
-
-	}
+//	public void addNewQuiz() {
+//		addNewQuiz = new AddNewQuiz(driver);
+//		addNewQuiz.getQuizName().sendKeys(prop.getProperty("quizName"));
+//		addNewQuiz.submitQuiz().click();
+//		editQuiz = new EditQuiz(driver);
+//		editQuiz.clickEditQuiz().click();
+//		editQuiz.clickAddQuiz().click();
+//		editQuiz.clickRandomQuiz().click();
+//		addRandomQuestion = new AddRandomQuestion(driver);
+//		dropDown = new Select(addRandomQuestion.getNumberOfQuiz());
+//		dropDown.selectByValue("4");
+//		addRandomQuestion.clickAddRandomQuiz().click();
+//
+//	}
 
 	@AfterTest
 	public void closeBrowser() {
