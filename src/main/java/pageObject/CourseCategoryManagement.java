@@ -31,7 +31,10 @@ public class CourseCategoryManagement extends BaseClass {
 	By courseName = By.xpath("//div[@id='course-listing']//a[text()='"+courseName1+"']");
 	@FindBy(linkText = "Edit")
 	WebElement edit;
-	By categoryNameId = By.xpath("//a[text()='"+categoryName+"']/following-sibling::div/span[text()='"+ctId+"']");
+	By categoryNameId = By.xpath("//span[text()='"+ctId+"']/parent::div/preceding-sibling::a[contains(text(),'"+categoryName+"')]");
+	//span[text()='1234']//parent::div//preceding-sibling::a[text()='QualitestCourse']
+	//span[text()='"+ctId+"']/parent::div/preceding-sibling::a[text()='"+category+"']
+	//a[text()='QualitestCourse']/following-sibling::div/span[text()='1234']
 	public WebElement createNewCategory() {
 		return createNewCategory;
 	}

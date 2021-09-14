@@ -22,6 +22,17 @@ public class EditQuiz {
 	@FindBy(xpath = "//span[text()='a random question']/parent::a")
 	WebElement addRandomQuiz;
 
+	@FindBy(id = "//a[@class='flip_btn']")
+	WebElement flipBtn;
+	@FindBy(xpath="//span[text()='Users']")
+	WebElement users;
+	@FindBy(xpath="//a[text()='Enrolment methods']")
+	WebElement enrolmentMethod;
+	@FindBy(xpath="//*[@class='custom-select urlselect']")
+	WebElement addMethod;
+	@FindBy(xpath="//input[@name = 'submitbutton']")
+	WebElement addMethodBtn;
+
 
 	public WebElement clickEditQuiz() {
 		return editQuiz;
@@ -34,7 +45,20 @@ public class EditQuiz {
 	public WebElement clickRandomQuiz() {
 		return addRandomQuiz;
 	}
-
+	public WebElement getFlipButton() {
+		return flipBtn;
+	}
 	
-	
+	public WebElement getUsers() {
+		return users;
+	}
+	public WebElement getEnrolmentMethod() {
+		return enrolmentMethod;
+	}
+	public WebElement selectAddMethod() {
+		return addMethod;
+	}
+	public WebElement addMethodBtn() {
+		return addMethodBtn;
+	}
 }

@@ -1,3 +1,5 @@
-20:37:51.739 [main] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
-20:43:52.150 [main] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
-20:43:53.580 [main] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+23:01:36.739 [main] INFO  Assignment.Qualicoach.BaseClass - created new category
+23:01:48.871 [main] INFO  Assignment.Qualicoach.BaseClass - created new course
+23:02:10.051 [main] INFO  Assignment.Qualicoach.BaseClass - navigated to Home page of the application
+23:02:26.498 [main] INFO  Assignment.Qualicoach.BaseClass - Entered to Quiz page
+23:02:26.498 [main] INFO  Assignment.Qualicoach.BaseClass - new quiz is created

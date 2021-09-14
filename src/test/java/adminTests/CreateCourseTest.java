@@ -7,6 +7,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -119,7 +121,8 @@ public class CreateCourseTest extends BaseClass {
 //		if (ctid.equals(actualCategoryId) && ctname.equals(actualCtName)) {
 //			ccm.getCategoryName().click();
 //		}
-		
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].scrollIntoView(true);",ccm.getCategoryNameId());
 		ccm.getCategoryNameId().click();
 		ccm.createNewCourse().click();
 		addNewCourse = new AddNewCourse(driver);
@@ -155,6 +158,15 @@ public class CreateCourseTest extends BaseClass {
 		scrollBy(0, 700);
 		ccm.editCourse().click();
 		addNewCourse.saveAndDisplayBtn().click();
+		editQuiz = new EditQuiz(driver);
+		editQuiz.getFlipButton().click();
+		scrollToEnd();
+		editQuiz.getUsers().click();
+		editQuiz.getEnrolmentMethod().click();
+		dropDown = new Select(editQuiz.selectAddMethod());
+		dropDown.selectByVisibleText("Self enrolment");
+		scrollToEnd();
+		editQuiz.addMethodBtn();
 	}
 
 //	public void addNewQuiz() {
@@ -172,8 +184,8 @@ public class CreateCourseTest extends BaseClass {
 //
 //	}
 
-	@AfterTest
-	public void closeBrowser() {
-		driver.close();
-	}
+//	@AfterTest
+//	public void closeBrowser() {
+//		driver.close();
+//	}
 }
