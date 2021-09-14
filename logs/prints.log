@@ -1,1 +1,6 @@
-17:08:45.498 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Browser closed
+12:30:22.185 [main] INFO  Assignment.Qualicoach.BaseClass -  Browser is initialized
+12:30:28.454 [main] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+12:30:45.829 [main] INFO  Assignment.Qualicoach.BaseClass - Dashboard page is displayed
+12:30:52.648 [main] INFO  Assignment.Qualicoach.BaseClass - Landed to the edit profile page
+12:30:54.536 [main] INFO  Assignment.Qualicoach.BaseClass - User profile is updated successfully
+12:30:54.616 [main] INFO  Assignment.Qualicoach.BaseClass - Browser closed

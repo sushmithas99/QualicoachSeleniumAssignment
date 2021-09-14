@@ -1,6 +1,6 @@
-17:08:16.166 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
-17:08:23.009 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Search page is Displayed
-17:08:23.087 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Navigated to users tab
-17:08:29.361 [TestNG] INFO  Assignment.Qualicoach.BaseClass - Add new user page is displayed
-17:08:33.506 [TestNG] INFO  Assignment.Qualicoach.BaseClass - New user is successfully created
-17:08:37.639 [TestNG] INFO  Assignment.Qualicoach.BaseClass - driver closed
+23:14:36.131 [main] INFO  Assignment.Qualicoach.BaseClass - Perticular course is clicked
+23:14:36.154 [main] INFO  Assignment.Qualicoach.BaseClass - user is already enrolled to that course
+23:15:03.188 [main] INFO  Assignment.Qualicoach.BaseClass - Browser closed
+23:15:15.564 [main] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
+23:15:21.797 [main] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+23:15:40.008 [main] INFO  Assignment.Qualicoach.BaseClass - Home page is displayed

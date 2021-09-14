@@ -28,9 +28,26 @@ public class EnrolmentPage {
 	// @FindBy(xpath =
 	// "//li[@class='allsectionnames']/a[contains(text(),'Module')]")
 	// List<WebElements> module;
-	@FindBy(xpath = "//a[contains(text(),'Badge & Feedback')]")
+	
+	@FindBy(xpath="//div[@class='completioncheck completed']")
+	List<WebElement> completedTasks;
+	@FindBy(xpath="//div[@class='completioncheck incomplete']")
+	List<WebElement> incompletedTasks;
+	@FindBy(xpath="//li[@class='allsectionnames']//a[contains(text(),'Certificate')]")
+	WebElement certificatesec;
+	@FindBy(xpath="//div[contains(text(),'Certificate')]")
+	WebElement certificate;
+	@FindBy(xpath="//input[@value='Get your custom certificate']")
+	WebElement downloadCertificate;
+	@FindBy(xpath = "//a[contains(text(),'Badge ')]")
 	WebElement badgeFeedback;
 
+	@FindBy(xpath="//div[contains(text(),'Click here to claim')]")
+	WebElement badges;
+	@FindBy(xpath="//div[contains(text(),'Course Feedback')]")
+	WebElement feedback;
+	@FindBy(xpath = "//h3[@style='color:black;']")
+	WebElement badgeText;
 	public WebElement enrollMeBtn() {
 		return enrollMe;
 	}
@@ -47,5 +64,31 @@ public class EnrolmentPage {
 //		i++;
 		return driver.findElements(module);
 	}
-
+	public List<WebElement> getCompletedTasks(){
+		return completedTasks;
+	}
+	public List<WebElement> getIncompletedTasks(){
+		return incompletedTasks;
+	}
+	public WebElement getCertificateSection() {
+		return certificatesec;
+	}
+	public WebElement getCertificate() {
+		return certificate;
+	}
+	public WebElement downloadCertificate() {
+		return downloadCertificate;
+	}
+	public WebElement getBadgesFeedbacSec() {
+		return badgeFeedback;
+	}
+	public WebElement getBadge() {
+		return badges;
+	}
+	public WebElement getFeedbackForm() {
+		return feedback;
+	}
+	public WebElement getBadgeText() {
+		return badgeText;
+	}
 }

@@ -25,7 +25,7 @@ public class AddNewUserPage {
 	WebElement lname;
 	@FindBy(id = "id_email")
 	WebElement email;
-	@FindBy(id = "id_submitbutton")
+	@FindBy(xpath = "//input[@value='Create user']")
 	WebElement submit;
 	
 	public WebElement getUsername() {
