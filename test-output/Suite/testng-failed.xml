@@ -47,12 +47,18 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- studentTests.CourseEnrollmentTest -->
-      <class name="studentTests.TakeQuizTest">
+      <class name="studentTests.UpdateUserTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- studentTests.UpdateUserTest -->
+      <class name="adminTests.CreateCourseTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="tearDown"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- studentTests.TakeQuizTest -->
+      </class> <!-- adminTests.CreateCourseTest -->
       <class name="studentTests.StudentLoginTest">
         <methods>
           <include name="launchBrowser"/>
@@ -60,18 +66,6 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- studentTests.StudentLoginTest -->
-      <class name="adminTests.CreateCourseTest">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- adminTests.CreateCourseTest -->
-      <class name="studentTests.UpdateUserTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- studentTests.UpdateUserTest -->
       <class name="adminTests.DownloadReportTest">
         <methods>
           <include name="tearDown"/>
@@ -84,6 +78,12 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- adminTests.CreateUserTest -->
+      <class name="studentTests.TakeQuizTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- studentTests.TakeQuizTest -->
     </classes>
   </test> <!-- Student login(failed) -->
   <test name="create course(failed)" parallel="tests">
@@ -94,18 +94,12 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- studentTests.CourseEnrollmentTest -->
-      <class name="studentTests.TakeQuizTest">
+      <class name="studentTests.UpdateUserTest">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- studentTests.TakeQuizTest -->
-      <class name="studentTests.StudentLoginTest">
-        <methods>
-          <include name="launchBrowser"/>
           <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- studentTests.StudentLoginTest -->
+      </class> <!-- studentTests.UpdateUserTest -->
       <class name="adminTests.CreateCourseTest">
         <methods>
           <include name="launchBrowser"/>
@@ -113,59 +107,12 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- adminTests.CreateCourseTest -->
-      <class name="studentTests.UpdateUserTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- studentTests.UpdateUserTest -->
-      <class name="adminTests.DownloadReportTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- adminTests.DownloadReportTest -->
-      <class name="adminTests.CreateUserTest">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- adminTests.CreateUserTest -->
-    </classes>
-  </test> <!-- create course(failed) -->
-  <test name="Update user(failed)" parallel="tests">
-    <classes>
-      <class name="studentTests.CourseEnrollmentTest">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- studentTests.CourseEnrollmentTest -->
-      <class name="studentTests.TakeQuizTest">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- studentTests.TakeQuizTest -->
       <class name="studentTests.StudentLoginTest">
         <methods>
           <include name="launchBrowser"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- studentTests.StudentLoginTest -->
-      <class name="adminTests.CreateCourseTest">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- adminTests.CreateCourseTest -->
-      <class name="studentTests.UpdateUserTest">
-        <methods>
-          <include name="updateUserProfile"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- studentTests.UpdateUserTest -->
       <class name="adminTests.DownloadReportTest">
         <methods>
           <include name="tearDown"/>
@@ -178,6 +125,12 @@
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- adminTests.CreateUserTest -->
+      <class name="studentTests.TakeQuizTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- studentTests.TakeQuizTest -->
     </classes>
-  </test> <!-- Update user(failed) -->
+  </test> <!-- create course(failed) -->
 </suite> <!-- Failed suite [Suite] -->

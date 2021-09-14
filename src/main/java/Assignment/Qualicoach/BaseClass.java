@@ -58,10 +58,11 @@ public class BaseClass {
 		loginPage.getPassword().sendKeys(Pswd);
 		loginPage.loginBtn().click();
 	}
-	public void getScreenShootPath(String methodName,WebDriver driver) throws IOException{
+	public String getScreenShootPath(String methodName,WebDriver driver) throws IOException{
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir")+"\\reports\\"+methodName+".png";
 		FileUtils.copyFile(src, new File(path));
+		return path;
 	}
 }
