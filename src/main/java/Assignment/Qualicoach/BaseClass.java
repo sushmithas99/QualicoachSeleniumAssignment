@@ -37,6 +37,7 @@ public class BaseClass {
 			}
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

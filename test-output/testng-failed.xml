@@ -6,4 +6,14 @@
       <class name="adminTests.CreateCourseTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="adminTests.CreateCourseTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="createCourse"/>
+        </methods>
+      </class> <!-- adminTests.CreateCourseTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

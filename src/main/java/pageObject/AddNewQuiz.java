@@ -13,13 +13,24 @@ public class AddNewQuiz {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(id = "item_quiz")
+	WebElement quizActivity;
+
+	@FindBy(xpath = "//*[@class='submitbutton']")
+	WebElement addBtn;
 	@FindBy(id = "id_name")
 	WebElement quizName;
-
 	@FindBy(id = "id_submitbutton")
 	WebElement submit;
 
 
+	public WebElement getQuizActivity() {
+		return quizActivity;
+	}
+	
+	public WebElement getAddBtn() {
+		return addBtn;
+	}
 	public WebElement getQuizName() {
 		return quizName;
 	}

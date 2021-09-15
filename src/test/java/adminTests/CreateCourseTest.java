@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -160,13 +161,27 @@ public class CreateCourseTest extends BaseClass {
 		addNewCourse.saveAndDisplayBtn().click();
 		editQuiz = new EditQuiz(driver);
 		editQuiz.getFlipButton().click();
-		scrollToEnd();
+		editQuiz.getUsers().sendKeys(Keys.PAGE_DOWN);
 		editQuiz.getUsers().click();
 		editQuiz.getEnrolmentMethod().click();
 		dropDown = new Select(editQuiz.selectAddMethod());
 		dropDown.selectByVisibleText("Self enrolment");
 		scrollToEnd();
-		editQuiz.addMethodBtn();
+		editQuiz.addMethodBtn().click();
+		editQuiz.getBreadcrum().click();
+		editQuiz.editingOnBtn().click();
+		editQuiz.getAddActivity().click();
+		addNewQuiz = new AddNewQuiz(driver);
+		addNewQuiz.getQuizActivity().click();
+		addNewQuiz.getAddBtn().click();
+		addNewQuiz.getQuizName();
+		addNewQuiz.submitQuiz();
+		editQuiz.editQuizBtn().click();
+		editQuiz.addQuiz().click();
+		editQuiz.getNewQuestion().click();
+		editQuiz.getMultiplechoiceOptn().click();
+		editQuiz.addMCQBtn().click();
+		
 	}
 
 //	public void addNewQuiz() {

@@ -1,5 +1,6 @@
-23:01:36.739 [main] INFO  Assignment.Qualicoach.BaseClass - created new category
-23:01:48.871 [main] INFO  Assignment.Qualicoach.BaseClass - created new course
-23:02:10.051 [main] INFO  Assignment.Qualicoach.BaseClass - navigated to Home page of the application
-23:02:26.498 [main] INFO  Assignment.Qualicoach.BaseClass - Entered to Quiz page
-23:02:26.498 [main] INFO  Assignment.Qualicoach.BaseClass - new quiz is created
+17:01:50.435 [TestNG-tests-3] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
+17:01:50.434 [TestNG-tests-1] INFO  Assignment.Qualicoach.BaseClass - browser is initialized
+17:01:50.518 [TestNG-tests-2] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
+17:02:03.112 [TestNG-tests-1] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+17:02:03.746 [TestNG-tests-3] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+17:02:03.884 [TestNG-tests-2] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
