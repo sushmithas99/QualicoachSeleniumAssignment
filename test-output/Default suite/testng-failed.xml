@@ -11,7 +11,7 @@
       <class name="adminTests.CreateCourseTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="createCourse"/>
+          <include name="createCourse" invocation-numbers="1"/>
         </methods>
       </class> <!-- adminTests.CreateCourseTest -->
     </classes>

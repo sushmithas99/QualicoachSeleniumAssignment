@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
-<listeners>
-<listener class-name="listeners.Listener"></listener>
-</listeners>
-	<test name="Student login">
+	<listeners>
+		<listener class-name="listeners.Listener"></listener>
+	</listeners>
+	<test name="create user">
 		<classes>
-			<class name="studentTests.StudentLoginTest" />
-		</classes>
-	</test>
-	<test name="Enrol into course">
-		<classes>
-			<class name="studentTests.CourseEnrollmentTest" />
-		</classes>
-	</test>
+			<class name="adminTests.CreateUserTest" />
 
+		</classes>
+	</test>
 	<test name="Download reports">
 		<classes>
 			<class name="adminTests.DownloadReportTest" />
@@ -25,20 +20,22 @@
 			<class name="adminTests.CreateCourseTest" />
 		</classes>
 	</test>
+	<test name="Student login">
+		<classes>
+			<class name="studentTests.StudentLoginTest" />
+		</classes>
+	</test>
 	<test name="Update user">
 		<classes>
 			<class name="studentTests.UpdateUserTest" />
 		</classes>
 	</test>
-	<test name="Take quiz">
+	
+	<test name="Enrol into course">
 		<classes>
-			<class name="studentTests.TakeQuizTest" />
+			<class name="studentTests.CourseEnrollmentTest" />
 		</classes>
 	</test>
-	<test name="create user">
-		<classes>
-			<class name="adminTests.CreateUserTest" />
-
-		</classes>
-	</test>
+	
+	
 </suite> <!-- Suite -->

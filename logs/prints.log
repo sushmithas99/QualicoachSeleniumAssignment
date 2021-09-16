@@ -1,6 +1,1 @@
-17:01:50.435 [TestNG-tests-3] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
-17:01:50.434 [TestNG-tests-1] INFO  Assignment.Qualicoach.BaseClass - browser is initialized
-17:01:50.518 [TestNG-tests-2] INFO  Assignment.Qualicoach.BaseClass - Driver is initialized
-17:02:03.112 [TestNG-tests-1] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
-17:02:03.746 [TestNG-tests-3] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
-17:02:03.884 [TestNG-tests-2] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+23:17:50.388 [main] INFO  Assignment.Qualicoach.BaseClass - Entered to the Course section

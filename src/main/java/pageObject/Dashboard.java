@@ -18,10 +18,12 @@ public class Dashboard extends BaseClass {
 
 	}
 
-	By reportNmae = By.xpath("//a[text()='"+rname+"']");
+	By reportNmae = By.xpath("//a[text()='" + rname + "']");
+
 	public WebElement getReportName() {
 		return driver.findElement(reportNmae);
 	}
+
 	@FindBy(xpath = "//li[@class = 'dashboard_tabs']//i[@class = 'administration']")
 	WebElement search;
 

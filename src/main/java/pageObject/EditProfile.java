@@ -25,7 +25,7 @@ public class EditProfile {
 	WebElement country;
 	@FindBy(id = "id_timezone")
 	WebElement timeZone;
-	@FindBy(linkText ="Optional")
+	@FindBy(linkText = "Optional")
 	WebElement expandOptional;
 	@FindBy(id = "id_phone1")
 	WebElement phnum;
@@ -33,36 +33,45 @@ public class EditProfile {
 	WebElement address;
 	@FindBy(id = "id_submitbutton")
 	WebElement updateProfile;
-	public WebElement getFname(){
+
+	public WebElement getFname() {
 		return fname;
 	}
-	public WebElement getLname(){
+
+	public WebElement getLname() {
 		return lname;
 	}
-	public WebElement getEmail(){
+
+	public WebElement getEmail() {
 		return email;
 	}
-	public WebElement getCity(){
+
+	public WebElement getCity() {
 		return city;
 	}
-	public WebElement selectCountry(){
+
+	public WebElement selectCountry() {
 		return country;
 	}
-	public WebElement selectTimeZone(){
+
+	public WebElement selectTimeZone() {
 		return timeZone;
 	}
-	public WebElement expandOptional(){
+
+	public WebElement expandOptional() {
 		return expandOptional;
 	}
-	public WebElement getPhNumber(){
+
+	public WebElement getPhNumber() {
 		return phnum;
 	}
-	public WebElement getAddress(){
+
+	public WebElement getAddress() {
 		return address;
 	}
-	public WebElement updateBtn(){
+
+	public WebElement updateBtn() {
 		return updateProfile;
 	}
-	
 
 }

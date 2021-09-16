@@ -27,10 +27,11 @@ public class AddNewUserPage {
 	WebElement email;
 	@FindBy(xpath = "//input[@value='Create user']")
 	WebElement submit;
-	
+
 	public WebElement getUsername() {
 		return usename;
 	}
+
 	public WebElement clickOnPswd() {
 		return passwordclick;
 	}

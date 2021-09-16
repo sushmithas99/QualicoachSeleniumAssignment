@@ -20,6 +20,4 @@ public class CoursePage {
 		return manageCC;
 	}
 
-	
-
 }

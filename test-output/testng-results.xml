@@ -1,40 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20426" started-at="2021-09-15T11:10:12Z" finished-at="2021-09-15T11:10:32Z">
+  <suite name="Default suite" duration-ms="130329" started-at="2021-09-15T17:45:45Z" finished-at="2021-09-15T17:47:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20426" started-at="2021-09-15T11:10:12Z" finished-at="2021-09-15T11:10:32Z">
+    <test name="Default test" duration-ms="130329" started-at="2021-09-15T17:45:45Z" finished-at="2021-09-15T17:47:56Z">
       <class name="adminTests.CreateCourseTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@478190fc]" name="launchBrowser" is-config="true" duration-ms="3149" started-at="2021-09-15T16:40:12Z" finished-at="2021-09-15T16:40:15Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="launchBrowser" is-config="true" duration-ms="2512" started-at="2021-09-15T23:15:45Z" finished-at="2021-09-15T23:15:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="createCourse()[pri:0, instance:adminTests.CreateCourseTest@478190fc]" name="createCourse" duration-ms="17256" started-at="2021-09-15T16:40:15Z" finished-at="2021-09-15T16:40:32Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="PASS" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="createCourse" duration-ms="117386" started-at="2021-09-15T23:15:48Z" data-provider="categoryDetails" finished-at="2021-09-15T23:17:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SoftwateTesting]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7896]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCourse -->
+        <test-method status="FAIL" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="createCourse" duration-ms="10413" started-at="2021-09-15T23:17:45Z" data-provider="categoryDetails" finished-at="2021-09-15T23:17:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QualitestCourse]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot locate an element using id=username
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-K932JURE', ip: '192.168.42.35', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[Category ID is already Present expected [Course and category management] but found [Qualicoach: Add new category]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=username
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-K932JURE', ip: '192.168.42.35', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy24.sendKeys(Unknown Source)
-	at Assignment.Qualicoach.BaseClass.loginCredentials(BaseClass.java:58)
-	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:63)
+              <![CDATA[java.lang.AssertionError: Category ID is already Present expected [Course and category management] but found [Qualicoach: Add new category]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -61,7 +78,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCourse -->

@@ -1,27 +1,22 @@
 package adminTests;
 
 
-import java.util.Iterator;
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Assignment.Qualicoach.BaseClass;
 import pageObject.AddNewCategory;
 import pageObject.AddNewCourse;
 import pageObject.AddNewQuiz;
-import pageObject.AddRandomQuestion;
 import pageObject.CourseCategoryManagement;
 import pageObject.CoursePage;
 import pageObject.Dashboard;
@@ -41,7 +36,6 @@ public class CreateCourseTest extends BaseClass {
 	public ErrorMessagePage errorMessagePage;
 	public AddNewQuiz addNewQuiz;
 	public EditQuiz editQuiz;
-	public AddRandomQuestion addRandomQuestion;
 	public HomePage homePage;
 	public static Logger log = LogManager.getLogger(BaseClass.class.getName());
 
@@ -51,93 +45,44 @@ public class CreateCourseTest extends BaseClass {
 		log.info("Driver is initialized");
 		
 	}
-
-	
-
-	@Test
-	public void createCourse() {
+	@Test(dataProvider = "categoryDetails")
+	public void createCourse(String ctname,String CtId) {
+//		try{
 		driver.get(prop.getProperty("adminUrl"));
 		log.info("Navigated to Login page");
+		String actulTitle = driver.getTitle();
+		String expectedTitle = "Qualicoach: Log in to the site";
+		if (actulTitle.equalsIgnoreCase(expectedTitle)) {
 		String username = prop.getProperty("adminUsername");
 		String password = prop.getProperty("adminPswd");
 		loginCredentials(username, password);
 		log.info("Login successfully");
-		courses();
-		log.info("Landed to Search Page");
-		manageCourseAndCategories();
-		log.info("Entered to the Course section");
-		newCategory();
-		
-		createCategory();
-		log.info("created new category");
-		createNewCourse();
-		log.info("created new course");
-		errorMessage();
-		log.info("navigated to Home page of the application");
-		courses();
-		manageCourseAndCategories();
-		searchCourse();
-		log.info("Entered to Quiz page");
-//		addNewQuiz();
-		log.info("new quiz is created");
-
-	}
-
-	public void courses() {
+		}
 		searchPage = new SearchPage(driver);
 		searchPage.courseTab().click();
-	}
-
-	public void manageCourseAndCategories() {
+		log.info("Landed to Search Page");
 		coursePage = new CoursePage(driver);
 		coursePage.manageCourseCategory().click();
-	}
-
-	public void newCategory() {
+		log.info("Entered to the Course section");
 		ccm = new CourseCategoryManagement(driver);
 		ccm.createNewCategory().click();
-	}
-
-	public void createCategory() {
 		addNewCategory = new AddNewCategory(driver);
 		dropDown = new Select(addNewCategory.selectParentCategory());
 		dropDown.selectByVisibleText("Induction Training");
-		addNewCategory.getCategoryName().sendKeys(prop.getProperty("categoryName"));
-		addNewCategory.getCategoryId().sendKeys(prop.getProperty("categoryId"));
+		addNewCategory.getCategoryName().sendKeys(ctname);
+		addNewCategory.getCategoryId().sendKeys(CtId);
 		scrollBy(0, 500);
 		addNewCategory.createCategory().click();
-	}
-
-	public void createNewCourse() {
-//		List<WebElement> categoryEle = driver.findElements(By.xpath("//a[text()='QualitestCourse']"));
-//		Iterator<WebElement> iterator = categoryEle.iterator();
-//		while(iterator.hasNext()){
-//			
-//		}
-//		
-//		String ctid = prop.getProperty("categoryId");
-//		String ctname = prop.getProperty("categoryName");
-//		String actualCategoryId = ccm.getCategoryId().getText();
-//		String actualCtName = ccm.getCategoryName().getText();
-//		if (ctid.equals(actualCategoryId) && ctname.equals(actualCtName)) {
-//			ccm.getCategoryName().click();
-//		}
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);",ccm.getCategoryNameId());
-		ccm.getCategoryNameId().click();
+		Assert.assertEquals(driver.getTitle(), "Course and category management","Category ID is already Present");
+		log.info("created new category");
+		driver.findElement(By.xpath(
+				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]")).click();
 		ccm.createNewCourse().click();
 		addNewCourse = new AddNewCourse(driver);
 		addNewCourse.getFullName().sendKeys(prop.getProperty("fullName"));
 		addNewCourse.getShortName().sendKeys(prop.getProperty("shortName"));
-//		addNewCourse.courseFormate().click();
-//		dropDown = new Select(addNewCourse.selectFormate());
-//		dropDown.selectByVisibleText("Single activity format");
-//		dropDown = new Select(addNewCourse.selectActivityType());
-//		dropDown.selectByVisibleText("Quiz");
 		addNewCourse.saveAndDisplayBtn().click();
-	}
-
-	public  void errorMessage() {
+		log.info("created new course");
 		if (driver.getTitle().equalsIgnoreCase("Error")) {
 			errorMessagePage = new ErrorMessagePage(driver);
 			errorMessagePage.continueBtn().click();
@@ -147,14 +92,13 @@ public class CreateCourseTest extends BaseClass {
 			Dashboard dashboard = new Dashboard(driver);
 			dashboard.search().click();
 		}
-	}
-
-	public void searchCourse() {
-//		String ctid = prop.getProperty("categoryId");
-//		String ctname = prop.getProperty("categoryName");
-//		String actualCategoryId = ccm.getCategoryId().getText();
-//		String actualCtName = ccm.getCategoryName().getText();
-		ccm.getCategoryNameId().click();
+		log.info("navigated to Home page of the application");
+		searchPage = new SearchPage(driver);
+		searchPage.courseTab().click();
+		coursePage = new CoursePage(driver);
+		coursePage.manageCourseCategory().click();
+		driver.findElement(By.xpath(
+				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]")).click();
 		ccm.getCourseName().click();
 		scrollBy(0, 700);
 		ccm.editCourse().click();
@@ -167,40 +111,60 @@ public class CreateCourseTest extends BaseClass {
 		dropDown = new Select(editQuiz.selectAddMethod());
 		dropDown.selectByVisibleText("Self enrolment");
 		scrollToEnd();
+		log.debug("click on Addmethod Button");
 		editQuiz.addMethodBtn().click();
+		log.info("Add method button is clicked");
 		editQuiz.getBreadcrum().click();
+		log.info("Navigated back to course page");
+		log.debug("click on editing Button");
 		editQuiz.editingOnBtn().click();
 		editQuiz.getAddActivity().click();
 		addNewQuiz = new AddNewQuiz(driver);
+		log.debug("Select quiz activity");
 		addNewQuiz.getQuizActivity().click();
 		addNewQuiz.getAddBtn().click();
-		addNewQuiz.getQuizName();
-		addNewQuiz.submitQuiz();
+		log.info("quiz activity is selected");
+		addNewQuiz.getQuizName().sendKeys(prop.getProperty("quizName"));
+		addNewQuiz.submitQuiz().click();
 		editQuiz.editQuizBtn().click();
 		editQuiz.addQuiz().click();
 		editQuiz.getNewQuestion().click();
+		log.debug("Select MCQ");
 		editQuiz.getMultiplechoiceOptn().click();
 		editQuiz.addMCQBtn().click();
+		log.info("MCQ is selected");
+		addNewQuiz.getQuestionName().sendKeys(prop.getProperty("questionName"));
+		addNewQuiz.getQuestionText().sendKeys(prop.getProperty("questiontext"));
+		addNewQuiz.getChoice1().sendKeys(prop.getProperty("choice1"));
+		dropDown = new Select(addNewQuiz.selectGrade());
+		dropDown.selectByVisibleText("100%");
+		addNewQuiz.getChoice2().sendKeys(prop.getProperty("choice2"));
+		addNewQuiz.getChoice3().sendKeys(prop.getProperty("choice3"));
+		addNewQuiz.getChoice4().sendKeys(prop.getProperty("choice4"));
+		log.info("All data entered");
+		addNewQuiz.saveChangesBtn().click();
+		log.info("One quiz is created");
 		
+		
+//		}
+//		catch(Exception e){
+//			Assert.assertTrue(false, "No such element found");
+//			log.error("Something went wrong in the site");
+//		}
+//		
+
+	
+
 	}
+	@DataProvider(name = "categoryDetails")
+	public String[][] getData(){
+		String data[][] = {{"SoftwateTesting","7896"},{"QualitestCourse", "1234"}};
+		return data;
+	}
+	
 
-//	public void addNewQuiz() {
-//		addNewQuiz = new AddNewQuiz(driver);
-//		addNewQuiz.getQuizName().sendKeys(prop.getProperty("quizName"));
-//		addNewQuiz.submitQuiz().click();
-//		editQuiz = new EditQuiz(driver);
-//		editQuiz.clickEditQuiz().click();
-//		editQuiz.clickAddQuiz().click();
-//		editQuiz.clickRandomQuiz().click();
-//		addRandomQuestion = new AddRandomQuestion(driver);
-//		dropDown = new Select(addRandomQuestion.getNumberOfQuiz());
-//		dropDown.selectByValue("4");
-//		addRandomQuestion.clickAddRandomQuiz().click();
-//
-//	}
-
-//	@AfterTest
-//	public void closeBrowser() {
-//		driver.close();
-//	}
+	@AfterTest
+	public void closeBrowser() {
+		driver.close();
+	}
 }

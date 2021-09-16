@@ -17,12 +17,6 @@ public class AddNewCourse {
 	WebElement fullName;
 	@FindBy(id = "id_shortname")
 	WebElement shortName;
-	@FindBy(xpath = "//a[text()='Course format']")
-	WebElement courseFormate;
-	@FindBy(id = "id_format")
-	WebElement selectFormate;
-	@FindBy(id = "id_activitytype")
-	WebElement selectActivityType;
 	@FindBy(id = "id_saveanddisplay")
 	WebElement saveAndDisplay;
 
@@ -32,18 +26,6 @@ public class AddNewCourse {
 
 	public WebElement getShortName() {
 		return shortName;
-	}
-
-	public WebElement courseFormate() {
-		return courseFormate;
-	}
-
-	public WebElement selectFormate() {
-		return selectFormate;
-	}
-
-	public WebElement selectActivityType() {
-		return selectActivityType;
 	}
 
 	public WebElement saveAndDisplayBtn() {
