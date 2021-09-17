@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests">
-	<listeners>
+  <listeners>
 		<listener class-name="listeners.Listener"></listener>
 	</listeners>
 	<test name="create user">
@@ -36,6 +36,14 @@
 			<class name="studentTests.CourseEnrollmentTest" />
 		</classes>
 	</test>
-	
-	
+	<test name="badges and feedback">
+		<classes>
+			<class name="studentTests.BadgesFeedbackTest" />
+		</classes>
+	</test>
+	<test name="download certificate">
+		<classes>
+			<class name="studentTests.DownloadCertificateTest" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

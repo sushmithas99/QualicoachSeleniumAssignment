@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="150337" started-at="2021-09-16T16:28:02Z" finished-at="2021-09-16T16:30:33Z">
+  <suite name="Default suite" duration-ms="69614" started-at="2021-09-17T02:28:28Z" finished-at="2021-09-17T02:29:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="150337" started-at="2021-09-16T16:28:02Z" finished-at="2021-09-16T16:30:33Z">
-      <class name="adminTests.CreateCourseTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="launchBrowser" is-config="true" duration-ms="8989" started-at="2021-09-16T21:58:02Z" finished-at="2021-09-16T21:58:11Z">
+    <test name="Default test" duration-ms="69614" started-at="2021-09-17T02:28:28Z" finished-at="2021-09-17T02:29:37Z">
+      <class name="studentTests.BadgesFeedbackTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:studentTests.BadgesFeedbackTest@7c0c77c7]" name="launchBrowser" is-config="true" duration-ms="2453" started-at="2021-09-17T07:58:28Z" finished-at="2021-09-17T07:58:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="createCourse" duration-ms="126181" started-at="2021-09-16T21:58:11Z" data-provider="categoryDetails" finished-at="2021-09-16T22:00:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[SoftwateTesting]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[7896]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createCourse -->
-        <test-method status="FAIL" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="createCourse" duration-ms="10980" started-at="2021-09-16T22:00:18Z" data-provider="categoryDetails" finished-at="2021-09-16T22:00:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[QualitestCourse]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="enrollIntoCourse()[pri:0, instance:studentTests.BadgesFeedbackTest@7c0c77c7]" name="enrollIntoCourse" duration-ms="67065" started-at="2021-09-17T07:58:30Z" finished-at="2021-09-17T07:59:37Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Category ID is already Present expected [Course and category management] but found [Qualicoach: Add new category]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='multichoice_335[0]' and @value='2']"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 59069ccd2704105662f3cc59739091f8
+*** Element info: {Using=xpath, value=//input[@name='multichoice_335[0]' and @value='2']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Category ID is already Present expected [Course and category management] but found [Qualicoach: Add new category]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:76)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='multichoice_335[0]' and @value='2']"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-K932JURE', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\SUSHMI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65049}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 59069ccd2704105662f3cc59739091f8
+*** Element info: {Using=xpath, value=//input[@name='multichoice_335[0]' and @value='2']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObject.FeedbackForm.getQuestion1Ans(FeedbackForm.java:38)
+	at studentTests.BadgesFeedbackTest.enrollIntoCourse(BadgesFeedbackTest.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -78,15 +76,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createCourse -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="closeBrowser" is-config="true" duration-ms="4169" started-at="2021-09-16T22:00:29Z" finished-at="2021-09-16T22:00:33Z">
+        </test-method> <!-- enrollIntoCourse -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:studentTests.BadgesFeedbackTest@7c0c77c7]" name="closeBrowser" is-config="true" duration-ms="79" started-at="2021-09-17T07:59:37Z" finished-at="2021-09-17T07:59:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- adminTests.CreateCourseTest -->
+      </class> <!-- studentTests.BadgesFeedbackTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

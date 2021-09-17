@@ -25,8 +25,8 @@ public class FeedbackForm extends BaseClass {
 	@FindBy(xpath = "//a[text()='Answer the questions']")
 	WebElement ansQuestion;
 
-	By question1 = By.xpath("//input[@name='multichoice_335[0]' and @value='" + q1 + "']");
-	By question2 = By.xpath("//input[@name='multichoice_336[0]' and @value='" + q2 + "']");
+	By question1 = By.xpath("//input[@name='multichoice_246[0]' and @value='" + q1 + "']");
+	By question2 = By.xpath("//input[@name='multichoice_247[0]' and @value='" + q2 + "']");
 	@FindBy(id = "id_savevalues")
 	WebElement submitAns;
 

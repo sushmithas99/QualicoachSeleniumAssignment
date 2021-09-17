@@ -33,7 +33,7 @@ public class StudentLoginTest extends BaseClass {
 	
 	@DataProvider(name ="loginCredentials")
 	public String[][] getData(){
-		String data[][] = {{"user01","qwer"},{"user12", "sushmitha12"}};
+		String data[][] = {{"user01","qwer"},{"user161", "User7014"}};
 		return data;
 	}
 
