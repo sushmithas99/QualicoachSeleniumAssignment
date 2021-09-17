@@ -29,8 +29,8 @@ public WebDriver driver;
 	public void updateUserProfile() {
 		driver.get(prop.getProperty("studentUrl"));
 		log.info("Navigated to Login page");
-		String username = prop.getProperty("username");
-		String password = prop.getProperty("password");
+		String username = prop.getProperty("euserName");
+		String password = prop.getProperty("epswd");
 		loginCredentials(username, password);
 		log.info("Dashboard page is displayed");
 		HomePage homePage = new HomePage(driver);

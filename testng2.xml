@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<listeners>
+		<listener class-name="listeners.Listener"></listener>
+	</listeners>
+	<test name="create user">
+		<classes>
+			<class name="adminTests.CreateUserTest" />
+
+		</classes>
+	</test>
+	<test name="Download reports">
+		<classes>
+			<class name="adminTests.DownloadReportTest" />
+		</classes>
+	</test>
+	<test name="create course">
+		<classes>
+			<class name="adminTests.CreateCourseTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

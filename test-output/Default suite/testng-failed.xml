@@ -12,6 +12,7 @@
         <methods>
           <include name="launchBrowser"/>
           <include name="createCourse" invocation-numbers="1"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- adminTests.CreateCourseTest -->
     </classes>

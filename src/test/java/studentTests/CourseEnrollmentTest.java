@@ -30,8 +30,8 @@ public class CourseEnrollmentTest extends BaseClass {
 	public void enrollIntoCourse() {
 		driver.get(prop.getProperty("studentUrl"));
 		log.info("Navigated to Login page");
-		String username = prop.getProperty("username");
-		String password = prop.getProperty("password");
+		String username = prop.getProperty("euserName");
+		String password = prop.getProperty("epswd");
 		loginCredentials(username, password);
 		log.info("Home page is displayed");
 		scrollBy(0, 1600);

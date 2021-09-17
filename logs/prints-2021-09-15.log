@@ -1,0 +1,7 @@
+23:17:25.745 [main] INFO  Assignment.Qualicoach.BaseClass - quiz activity is selected
+23:17:34.291 [main] DEBUG Assignment.Qualicoach.BaseClass - Select MCQ
+23:17:38.349 [main] INFO  Assignment.Qualicoach.BaseClass - MCQ is selected
+23:17:40.154 [main] INFO  Assignment.Qualicoach.BaseClass - All data entered
+23:17:45.626 [main] INFO  Assignment.Qualicoach.BaseClass - One quiz is created
+23:17:47.362 [main] INFO  Assignment.Qualicoach.BaseClass - Navigated to Login page
+23:17:47.499 [main] INFO  Assignment.Qualicoach.BaseClass - Landed to Search Page

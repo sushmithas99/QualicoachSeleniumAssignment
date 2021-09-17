@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<listeners>
+		<listener class-name="listeners.Listener"></listener>
+	</listeners>
+	<test name="Student login">
+		<classes>
+			<class name="studentTests.StudentLoginTest" />
+		</classes>
+	</test>
+	<test name="Update user">
+		<classes>
+			<class name="studentTests.UpdateUserTest" />
+		</classes>
+	</test>
+
+	<test name="Enrol into course">
+		<classes>
+			<class name="studentTests.CourseEnrollmentTest" />
+		</classes>
+	</test>
+	
+	<test name="Getbadges and certificate">
+		<classes>
+			<class name="studentTests.BadgesCertificateTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

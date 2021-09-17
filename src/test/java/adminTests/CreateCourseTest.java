@@ -1,6 +1,5 @@
 package adminTests;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -43,20 +42,21 @@ public class CreateCourseTest extends BaseClass {
 	public void launchBrowser() {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		
+
 	}
+
 	@Test(dataProvider = "categoryDetails")
-	public void createCourse(String ctname,String CtId) {
-//		try{
+	public void createCourse(String ctname, String CtId) {
+		// try{
 		driver.get(prop.getProperty("adminUrl"));
 		log.info("Navigated to Login page");
 		String actulTitle = driver.getTitle();
 		String expectedTitle = "Qualicoach: Log in to the site";
 		if (actulTitle.equalsIgnoreCase(expectedTitle)) {
-		String username = prop.getProperty("adminUsername");
-		String password = prop.getProperty("adminPswd");
-		loginCredentials(username, password);
-		log.info("Login successfully");
+			String username = prop.getProperty("adminUsername");
+			String password = prop.getProperty("adminPswd");
+			loginCredentials(username, password);
+			log.info("Login successfully");
 		}
 		searchPage = new SearchPage(driver);
 		searchPage.courseTab().click();
@@ -73,10 +73,11 @@ public class CreateCourseTest extends BaseClass {
 		addNewCategory.getCategoryId().sendKeys(CtId);
 		scrollBy(0, 500);
 		addNewCategory.createCategory().click();
-		Assert.assertEquals(driver.getTitle(), "Course and category management","Category ID is already Present");
+		Assert.assertEquals(driver.getTitle(), "Course and category management", "Category ID is already Present");
 		log.info("created new category");
 		driver.findElement(By.xpath(
-				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]")).click();
+				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]"))
+				.click();
 		ccm.createNewCourse().click();
 		addNewCourse = new AddNewCourse(driver);
 		addNewCourse.getFullName().sendKeys(prop.getProperty("fullName"));
@@ -93,12 +94,13 @@ public class CreateCourseTest extends BaseClass {
 			dashboard.search().click();
 		}
 		log.info("navigated to Home page of the application");
-		searchPage = new SearchPage(driver);
+
 		searchPage.courseTab().click();
 		coursePage = new CoursePage(driver);
 		coursePage.manageCourseCategory().click();
 		driver.findElement(By.xpath(
-				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]")).click();
+				"//span[text()='" + CtId + "']/parent::div/preceding-sibling::a[contains(text(),'" + ctname + "')]"))
+				.click();
 		ccm.getCourseName().click();
 		scrollBy(0, 700);
 		ccm.editCourse().click();
@@ -144,24 +146,14 @@ public class CreateCourseTest extends BaseClass {
 		log.info("All data entered");
 		addNewQuiz.saveChangesBtn().click();
 		log.info("One quiz is created");
-		
-		
-//		}
-//		catch(Exception e){
-//			Assert.assertTrue(false, "No such element found");
-//			log.error("Something went wrong in the site");
-//		}
-//		
-
-	
 
 	}
+
 	@DataProvider(name = "categoryDetails")
-	public String[][] getData(){
-		String data[][] = {{"SoftwateTesting","7896"},{"QualitestCourse", "1234"}};
+	public String[][] getData() {
+		String data[][] = { { "SoftwateTesting", "7896" }, { "QualitestCourse", "1234" } };
 		return data;
 	}
-	
 
 	@AfterTest
 	public void closeBrowser() {

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="130329" started-at="2021-09-15T17:45:45Z" finished-at="2021-09-15T17:47:56Z">
+  <suite name="Default suite" duration-ms="150337" started-at="2021-09-16T16:28:02Z" finished-at="2021-09-16T16:30:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="130329" started-at="2021-09-15T17:45:45Z" finished-at="2021-09-15T17:47:56Z">
+    <test name="Default test" duration-ms="150337" started-at="2021-09-16T16:28:02Z" finished-at="2021-09-16T16:30:33Z">
       <class name="adminTests.CreateCourseTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="launchBrowser" is-config="true" duration-ms="2512" started-at="2021-09-15T23:15:45Z" finished-at="2021-09-15T23:15:48Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="launchBrowser" is-config="true" duration-ms="8989" started-at="2021-09-16T21:58:02Z" finished-at="2021-09-16T21:58:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="createCourse" duration-ms="117386" started-at="2021-09-15T23:15:48Z" data-provider="categoryDetails" finished-at="2021-09-15T23:17:45Z">
+        <test-method status="PASS" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="createCourse" duration-ms="126181" started-at="2021-09-16T21:58:11Z" data-provider="categoryDetails" finished-at="2021-09-16T22:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCourse -->
-        <test-method status="FAIL" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@3a93b025]" name="createCourse" duration-ms="10413" started-at="2021-09-15T23:17:45Z" data-provider="categoryDetails" finished-at="2021-09-15T23:17:56Z">
+        <test-method status="FAIL" signature="createCourse(java.lang.String, java.lang.String)[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="createCourse" duration-ms="10980" started-at="2021-09-16T22:00:18Z" data-provider="categoryDetails" finished-at="2021-09-16T22:00:29Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:190)
-	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:75)
+	at adminTests.CreateCourseTest.createCourse(CreateCourseTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -82,6 +82,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createCourse -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:adminTests.CreateCourseTest@5cee5251]" name="closeBrowser" is-config="true" duration-ms="4169" started-at="2021-09-16T22:00:29Z" finished-at="2021-09-16T22:00:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- adminTests.CreateCourseTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
